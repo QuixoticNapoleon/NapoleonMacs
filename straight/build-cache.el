@@ -3,7 +3,7 @@
 
 "30.2"
 
-#s(hash-table test equal data ("straight" ("2025-12-10 14:34:06" ("emacs") (:type git :host github :repo "radian-software/straight.el" :files ("straight*.el") :branch "main" :package "straight" :local-repo "straight.el")) "org-elpa" ("2025-12-10 14:34:06" nil (:local-repo nil :package "org-elpa" :type git)) "melpa" ("2025-12-10 14:34:06" nil (:type git :host github :repo "melpa/melpa" :build nil :package "melpa" :local-repo "melpa")) "gnu-elpa-mirror" ("2025-12-10 14:34:08" nil (:type git :host github :repo "emacs-straight/gnu-elpa-mirror" :build nil :package "gnu-elpa-mirror" :local-repo "gnu-elpa-mirror")) "use-package" ("2025-12-10 14:34:12" ("emacs" "bind-key") (:type git :host github :repo "emacs-straight/use-package" :files ("*" (:exclude ".git")) :package "use-package" :local-repo "use-package")) "bind-key" ("2025-12-10 14:34:11" ("emacs") (:type git :host github :repo "emacs-straight/bind-key" :files ("*" (:exclude ".git")) :package "bind-key" :local-repo "bind-key")) "diminish" ("2025-12-10 14:34:13" ("emacs") (:type git :host github :repo "emacs-straight/diminish" :files ("*" (:exclude ".git")) :package "diminish" :local-repo "diminish")) "nongnu-elpa" ("2025-12-10 14:47:08" nil (:type git :repo "https://github.com/emacsmirror/nongnu_elpa.git" :depth (full single-branch) :local-repo "nongnu-elpa" :build nil :package "nongnu-elpa")) "evil" ("2025-12-10 14:47:20" ("emacs" "cl-lib" "goto-chg" "nadvice") (:repo "https://github.com/emacs-evil/evil" :files (:defaults (:exclude "COPYING" "lib" "scripts")) :package "evil" :type git :local-repo "evil")) "el-get" ("2025-12-10 14:47:16" nil (:type git :host github :repo "dimitri/el-get" :build nil :package "el-get" :local-repo "el-get")) "emacsmirror-mirror" ("2025-12-10 14:47:17" nil (:type git :host github :repo "emacs-straight/emacsmirror-mirror" :build nil :package "emacsmirror-mirror" :local-repo "emacsmirror-mirror")) "goto-chg" ("2025-12-10 14:47:19" ("emacs") (:repo "https://github.com/emacs-evil/goto-chg" :files (:defaults (:exclude "LICENSE")) :package "goto-chg" :type git :local-repo "goto-chg")) "evil-collection" ("2025-12-10 15:00:26" ("emacs" "evil" "annalist") (:type git :host github :repo "emacs-evil/evil-collection" :files (:defaults "modes") :package "evil-collection" :local-repo "evil-collection")) "annalist" ("2025-12-10 14:47:24" ("emacs" "cl-lib") (:type git :host github :repo "emacsmirror/annalist" :package "annalist" :local-repo "annalist")) "ultra-scroll" ("2025-12-10 17:06:48" ("emacs") (:type git :host github :repo "emacsmirror/ultra-scroll" :package "ultra-scroll" :local-repo "ultra-scroll"))))
+#s(hash-table test equal data ("straight" ("2025-12-10 14:34:06" ("emacs") (:type git :host github :repo "radian-software/straight.el" :files ("straight*.el") :branch "main" :package "straight" :local-repo "straight.el")) "org-elpa" ("2025-12-10 14:34:06" nil (:local-repo nil :package "org-elpa" :type git)) "melpa" ("2025-12-10 14:34:06" nil (:type git :host github :repo "melpa/melpa" :build nil :package "melpa" :local-repo "melpa")) "gnu-elpa-mirror" ("2025-12-10 14:34:08" nil (:type git :host github :repo "emacs-straight/gnu-elpa-mirror" :build nil :package "gnu-elpa-mirror" :local-repo "gnu-elpa-mirror")) "use-package" ("2025-12-10 14:34:12" ("emacs" "bind-key") (:type git :host github :repo "emacs-straight/use-package" :files ("*" (:exclude ".git")) :package "use-package" :local-repo "use-package")) "bind-key" ("2025-12-10 14:34:11" ("emacs") (:type git :host github :repo "emacs-straight/bind-key" :files ("*" (:exclude ".git")) :package "bind-key" :local-repo "bind-key")) "diminish" ("2025-12-10 14:34:13" ("emacs") (:type git :host github :repo "emacs-straight/diminish" :files ("*" (:exclude ".git")) :package "diminish" :local-repo "diminish")) "nongnu-elpa" ("2025-12-10 14:47:08" nil (:type git :repo "https://github.com/emacsmirror/nongnu_elpa.git" :depth (full single-branch) :local-repo "nongnu-elpa" :build nil :package "nongnu-elpa")) "evil" ("2025-12-10 14:47:20" ("emacs" "cl-lib" "goto-chg" "nadvice") (:repo "https://github.com/emacs-evil/evil" :files (:defaults (:exclude "COPYING" "lib" "scripts")) :package "evil" :type git :local-repo "evil")) "el-get" ("2025-12-10 14:47:16" nil (:type git :host github :repo "dimitri/el-get" :build nil :package "el-get" :local-repo "el-get")) "emacsmirror-mirror" ("2025-12-10 14:47:17" nil (:type git :host github :repo "emacs-straight/emacsmirror-mirror" :build nil :package "emacsmirror-mirror" :local-repo "emacsmirror-mirror")) "goto-chg" ("2025-12-10 14:47:19" ("emacs") (:repo "https://github.com/emacs-evil/goto-chg" :files (:defaults (:exclude "LICENSE")) :package "goto-chg" :type git :local-repo "goto-chg")) "evil-collection" ("2025-12-10 15:00:26" ("emacs" "evil" "annalist") (:type git :host github :repo "emacs-evil/evil-collection" :files (:defaults "modes") :package "evil-collection" :local-repo "evil-collection")) "annalist" ("2025-12-10 14:47:24" ("emacs" "cl-lib") (:type git :host github :repo "emacsmirror/annalist" :package "annalist" :local-repo "annalist")) "ultra-scroll" ("2025-12-10 17:06:48" ("emacs") (:type git :host github :repo "emacsmirror/ultra-scroll" :package "ultra-scroll" :local-repo "ultra-scroll")) "go-mode" ("2025-12-10 17:56:23" ("emacs") (:repo "https://github.com/dominikh/go-mode.el" :files (:defaults (:exclude "generate_authors.sh")) :package "go-mode" :type git :local-repo "go-mode")) "rust-mode" ("2025-12-10 17:56:25" ("emacs") (:repo "https://github.com/rust-lang/rust-mode" :files (:defaults (:exclude "test-*" "triagebot.toml" "*.sh")) :package "rust-mode" :type git :local-repo "rust-mode")) "doom-modeline" ("2025-12-10 18:04:35" ("emacs" "compat" "nerd-icons" "shrink-path") (:type git :host github :repo "seagle0128/doom-modeline" :files (:defaults) :package "doom-modeline" :local-repo "doom-modeline")) "compat" ("2025-12-10 18:04:25" ("emacs" "seq") (:type git :host github :repo "emacs-straight/compat" :files ("*" (:exclude ".git")) :package "compat" :local-repo "compat")) "seq" ("2025-12-10 18:04:25" nil (:type git :host github :repo "emacs-straight/seq" :files ("*" (:exclude ".git")) :package "seq" :local-repo "seq")) "nerd-icons" ("2025-12-10 18:09:03" ("emacs") (:type git :host github :repo "emacsmirror/nerd-icons" :package "nerd-icons" :local-repo "nerd-icons")) "shrink-path" ("2025-12-10 18:04:35" ("emacs" "s" "dash" "f") (:type git :repo "https://gitlab.com/bennya/shrink-path.el.git" :files (:defaults) :package "shrink-path" :local-repo "shrink-path.el")) "s" ("2025-12-10 18:04:31" nil (:type git :host github :repo "magnars/s.el" :files (:defaults) :package "s" :local-repo "s.el")) "dash" ("2025-12-10 18:04:33" ("emacs") (:type git :host github :repo "emacs-straight/dash" :files ("*" (:exclude ".git")) :package "dash" :local-repo "dash")) "f" ("2025-12-10 18:04:35" ("emacs" "s" "dash") (:type git :host github :repo "rejeep/f.el" :files (:defaults) :package "f" :local-repo "f.el"))))
 
 #s(hash-table test equal data ("straight" ((straight-autoloads straight straight-x straight-ert-print-hack) (autoload 'straight-remove-unused-repos "straight" "Remove unused repositories from the repos and build directories.
 A repo is considered \"unused\" if it was not explicitly requested via
@@ -700,10 +700,312 @@ evaluate `(default-value \\='ultra-scroll-mode)'.
 The mode's hook is called both when the mode is enabled and when it is
 disabled.
 
-(fn &optional ARG)" t) (register-definition-prefixes "ultra-scroll" '("ultra-scroll")) (provide 'ultra-scroll-autoloads))))
+(fn &optional ARG)" t) (register-definition-prefixes "ultra-scroll" '("ultra-scroll")) (provide 'ultra-scroll-autoloads)) "go-mode" ((go-mode-autoloads go-rename go-mode go-guru) (autoload 'go-guru-set-scope "go-guru" "Set the scope for the Go guru, prompting the user to edit the previous scope.
 
-#s(hash-table test eq data (org-elpa #s(hash-table test equal data (version (16 "https://github.com/emacs-straight/org-mode.git") "use-package" nil "bind-key" nil "diminish" nil "evil" nil "cl-lib" nil "goto-chg" nil "evil-collection" nil "annalist" nil "ultra-scroll" nil)) melpa #s(hash-table test equal data (version 3 "use-package" nil "bind-key" nil "diminish" nil "evil" nil "cl-lib" nil "goto-chg" nil "evil-collection" nil "annalist" nil "ultra-scroll" nil)) gnu-elpa-mirror #s(hash-table test equal data (version 3 "use-package" (use-package :type git :host github :repo "emacs-straight/use-package" :files ("*" (:exclude ".git"))) "bind-key" (bind-key :type git :host github :repo "emacs-straight/bind-key" :files ("*" (:exclude ".git"))) "diminish" (diminish :type git :host github :repo "emacs-straight/diminish" :files ("*" (:exclude ".git"))) "evil" nil "cl-lib" nil "goto-chg" nil "evil-collection" nil "annalist" nil "ultra-scroll" nil)) nongnu-elpa #s(hash-table test equal data (version (5 "https://github.com/emacsmirror/nongnu_elpa.git") "evil" (evil :repo "https://github.com/emacs-evil/evil" :files (:defaults (:exclude "COPYING" "lib" "scripts"))) "cl-lib" nil "goto-chg" (goto-chg :repo "https://github.com/emacs-evil/goto-chg" :files (:defaults (:exclude "LICENSE"))) "evil-collection" nil "annalist" nil "ultra-scroll" nil)) el-get #s(hash-table test equal data (version 2 "cl-lib" nil "evil-collection" nil "annalist" nil "ultra-scroll" nil)) emacsmirror-mirror #s(hash-table test equal data (version 2 "cl-lib" nil "evil-collection" (evil-collection :type git :host github :repo "emacsmirror/evil-collection") "annalist" (annalist :type git :host github :repo "emacsmirror/annalist") "ultra-scroll" (ultra-scroll :type git :host github :repo "emacsmirror/ultra-scroll")))))
+The scope restricts analysis to the specified packages.
+Its value is a comma-separated list of patterns of these forms:
+	golang.org/x/tools/cmd/guru     # a single package
+	golang.org/x/tools/...          # all packages beneath dir
+	...                             # the entire workspace.
 
-("annalist" "evil-collection" "nadvice" "goto-chg" "cl-lib" "evil" "diminish" "bind-key" "use-package" "emacsmirror-mirror" "el-get" "nongnu-elpa" "gnu-elpa-mirror" "melpa" "org-elpa" "emacs" "straight")
+A pattern preceded by '-' is negative, so the scope
+	encoding/...,-encoding/xml
+matches all encoding packages except encoding/xml." t) (autoload 'go-guru-callees "go-guru" "Show possible callees of the function call at the current point." t) (autoload 'go-guru-callers "go-guru" "Show the set of callers of the function containing the current point." t) (autoload 'go-guru-callstack "go-guru" "Show an arbitrary path from a root of the call graph to the
+function containing the current point." t) (autoload 'go-guru-definition "go-guru" "Jump to the definition of the selected identifier.
+
+(fn &optional OTHER-WINDOW)" t) (autoload 'go-guru-definition-other-window "go-guru" "Jump to the defintion of the selected identifier in another window" t) (autoload 'go-guru-describe "go-guru" "Describe the selected syntax, its kind, type and methods." t) (autoload 'go-guru-pointsto "go-guru" "Show what the selected expression points to." t) (autoload 'go-guru-implements "go-guru" "Describe the 'implements' relation for types in the package
+containing the current point." t) (autoload 'go-guru-freevars "go-guru" "Enumerate the free variables of the current selection." t) (autoload 'go-guru-peers "go-guru" "Enumerate the set of possible corresponding sends/receives for
+this channel receive/send operation." t) (autoload 'go-guru-referrers "go-guru" "Enumerate all references to the object denoted by the selected
+identifier." t) (autoload 'go-guru-whicherrs "go-guru" "Show globals, constants and types to which the selected
+expression (of type 'error') may refer." t) (autoload 'go-guru-unhighlight-identifiers "go-guru" "Remove highlights from previously highlighted identifier.") (autoload 'go-guru-hl-identifier "go-guru" "Highlight all instances of the identifier under point. Removes
+highlights from previously highlighted identifier." t) (autoload 'go-guru-hl-identifier-mode "go-guru" "Highlight instances of the identifier at point after a short
+
+timeout.
+
+This is a minor mode.  If called interactively, toggle the
+`Go-Guru-Hl-Identifier mode' mode.  If the prefix argument is positive,
+enable the mode, and if it is zero or negative, disable the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable the
+mode if ARG is nil, omitted, or is a positive number.  Disable the mode
+if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate the variable `go-guru-hl-identifier-mode'.
+
+The mode's hook is called both when the mode is enabled and when it is
+disabled.
+
+(fn &optional ARG)" t) (register-definition-prefixes "go-guru" '("go-guru-")) (autoload 'go-mode "go-mode" "Major mode for editing Go source text.
+
+This mode provides (not just) basic editing capabilities for
+working with Go code. It offers almost complete syntax
+highlighting, indentation that is almost identical to gofmt and
+proper parsing of the buffer content to allow features such as
+navigation by function, manipulation of comments or detection of
+strings.
+
+In addition to these core features, it offers various features to
+help with writing Go code. You can directly run buffer content
+through gofmt, read godoc documentation from within Emacs, modify
+and clean up the list of package imports or interact with the
+Playground (uploading and downloading pastes).
+
+The following extra functions are defined:
+
+- `gofmt'
+- `godoc' and `godoc-at-point'
+- `go-import-add'
+- `go-goto-arguments'
+- `go-goto-docstring'
+- `go-goto-function'
+- `go-goto-function-name'
+- `go-goto-imports'
+- `go-goto-return-values'
+- `go-goto-method-receiver'
+- `go-play-buffer' and `go-play-region'
+- `go-download-play'
+- `godef-describe' and `godef-jump'
+- `go-coverage'
+
+If you want to automatically run `gofmt' before saving a file,
+add the following hook to your Emacs configuration:
+
+(add-hook 'before-save-hook #'gofmt-before-save)
+
+If you want to use `godef-jump' instead of etags (or similar),
+consider binding godef-jump to `M-.', which is the default key
+for `find-tag':
+
+(add-hook 'go-mode-hook (lambda ()
+                          (local-set-key (kbd \"M-.\") #'godef-jump)))
+
+Please note that godef is an external dependency. You can install
+it with
+
+go get github.com/rogpeppe/godef
+
+
+If you're looking for even more integration with Go, namely
+on-the-fly syntax checking, auto-completion and snippets, it is
+recommended that you look at flycheck
+(see URL `https://github.com/flycheck/flycheck') or flymake in combination
+with goflymake (see URL `https://github.com/dougm/goflymake'), gocode
+(see URL `https://github.com/nsf/gocode'), go-eldoc
+(see URL `github.com/syohex/emacs-go-eldoc') and yasnippet-go
+(see URL `https://github.com/dominikh/yasnippet-go')
+
+(fn)" t) (add-to-list 'auto-mode-alist (cons "\\.go\\'" 'go-mode)) (autoload 'gofmt-before-save "go-mode" "Add this to .emacs to run gofmt on the current buffer when saving:
+(add-hook 'before-save-hook 'gofmt-before-save).
+
+Note that this will cause ‘go-mode’ to get loaded the first time
+you save any file, kind of defeating the point of autoloading." t) (autoload 'godoc "go-mode" "Show Go documentation for QUERY, much like \\<go-mode-map>\\[man].
+
+(fn QUERY)" t) (autoload 'go-download-play "go-mode" "Download a paste from the playground and insert it in a Go buffer.
+Tries to look for a URL at point.
+
+(fn URL)" t) (autoload 'go-dot-mod-mode "go-mode" "A major mode for editing go.mod files.
+
+(fn)" t) (add-to-list 'auto-mode-alist '("go\\.mod\\'" . go-dot-mod-mode)) (autoload 'go-dot-work-mode "go-mode" "A major mode for editor go.work files.
+
+(fn)" t) (add-to-list 'auto-mode-alist '("go\\.work\\'" . go-dot-work-mode)) (autoload 'go-asm-mode "go-mode" "Major mode for Go assembly (.s) files.
+
+(fn)" t) (add-to-list 'magic-mode-alist (cons #'go--is-go-asm #'go-asm-mode)) (autoload 'go--is-go-asm "go-mode" "Determine whether a file is (probably) a Go assembly file.") (register-definition-prefixes "go-mode" '("go-" "god" "gofmt")) (autoload 'go-rename "go-rename" "Rename the entity denoted by the identifier at point, using
+the `gorename' tool. With FORCE, call `gorename' with the
+`-force' flag.
+
+(fn NEW-NAME &optional FORCE)" t) (register-definition-prefixes "go-rename" '("go-")) (provide 'go-mode-autoloads)) "rust-mode" ((rust-mode-autoloads rust-utils rust-rustfmt rust-prog-mode rust-playpen rust-mode rust-mode-treesitter rust-compile rust-common rust-cargo) (register-definition-prefixes "rust-cargo" '("rust-")) (register-definition-prefixes "rust-common" '("rust-")) (register-definition-prefixes "rust-compile" '("cargo-compilation-regexps" "rustc-")) (autoload 'rust-mode "rust-mode" "Major mode for Rust code." t) (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode)) (register-definition-prefixes "rust-mode" '("rust-")) (register-definition-prefixes "rust-playpen" '("rust-")) (register-definition-prefixes "rust-prog-mode" '("rust-")) (register-definition-prefixes "rust-rustfmt" '("rust-")) (autoload 'rust-dbg-wrap-or-unwrap "rust-utils" "Either remove or add the dbg! macro." t) (register-definition-prefixes "rust-utils" '("rust-")) (provide 'rust-mode-autoloads)) "seq" ((seq-autoloads seq seq-pkg seq-25 seq-24) (register-definition-prefixes "seq-24" '("seq")) (autoload 'seq-subseq "seq-25" "Return the sequence of elements of SEQUENCE from START to END.
+END is exclusive.
+
+If END is omitted, it defaults to the length of the sequence.  If
+START or END is negative, it counts from the end.  Signal an
+error if START or END are outside of the sequence (i.e too large
+if positive or too small if negative).
+
+(fn SEQUENCE START &optional END)") (autoload 'seq-take "seq-25" "Return the sequence made of the first N elements of SEQUENCE.
+The result is a sequence of the same type as SEQUENCE.
+
+If N is a negative integer or zero, an empty sequence is
+returned.
+
+(fn SEQUENCE N)") (autoload 'seq-sort-by "seq-25" "Sort SEQUENCE transformed by FUNCTION using PRED as the comparison function.
+Elements of SEQUENCE are transformed by FUNCTION before being
+sorted.  FUNCTION must be a function of one argument.
+
+(fn FUNCTION PRED SEQUENCE)") (autoload 'seq-filter "seq-25" "Return a list of all the elements in SEQUENCE for which PRED returns non-nil.
+
+(fn PRED SEQUENCE)") (autoload 'seq-remove "seq-25" "Return a list of all the elements in SEQUENCE for which PRED returns nil.
+
+(fn PRED SEQUENCE)") (autoload 'seq-remove-at-position "seq-25" "Return a copy of SEQUENCE with the element at index N removed.
+
+N is the (zero-based) index of the element that should not be in
+the result.
+
+The result is a sequence of the same type as SEQUENCE.
+
+(fn SEQUENCE N)") (autoload 'seq-reduce "seq-25" "Reduce the function FUNCTION across SEQUENCE, starting with INITIAL-VALUE.
+
+Return the result of calling FUNCTION with INITIAL-VALUE and the
+first element of SEQUENCE, then calling FUNCTION with that result
+and the second element of SEQUENCE, then with that result and the
+third element of SEQUENCE, etc.  FUNCTION will be called with
+INITIAL-VALUE (and then the accumulated value) as the first
+argument, and the elements from SEQUENCE as the second argument.
+
+If SEQUENCE is empty, return INITIAL-VALUE and FUNCTION is not called.
+
+(fn FUNCTION SEQUENCE INITIAL-VALUE)") (autoload 'seq-every-p "seq-25" "Return non-nil if PRED returns non-nil for all the elements of SEQUENCE.
+
+(fn PRED SEQUENCE)") (autoload 'seq-some "seq-25" "Return non-nil if PRED returns non-nil for at least one element of SEQUENCE.
+If the value is non-nil, it is the first non-nil value returned by PRED.
+
+(fn PRED SEQUENCE)") (autoload 'seq-find "seq-25" "Return the first element in SEQUENCE for which PRED returns non-nil.
+If no such element is found, return DEFAULT.
+
+Note that `seq-find' has an ambiguity if the found element is
+identical to DEFAULT, as in that case it is impossible to know
+whether an element was found or not.
+
+(fn PRED SEQUENCE &optional DEFAULT)") (autoload 'seq-position "seq-25" "Return the (zero-based) index of the first element in SEQUENCE \"equal\" to ELT.
+\"Equality\" is defined by the function TESTFN, which defaults to `equal'.
+
+(fn SEQUENCE ELT &optional TESTFN)") (autoload 'seq-positions "seq-25" "Return list of indices of SEQUENCE elements for which TESTFN returns non-nil.
+
+TESTFN is a two-argument function which is called with each element of
+SEQUENCE as the first argument and ELT as the second.
+TESTFN defaults to `equal'.
+
+The result is a list of (zero-based) indices.
+
+(fn SEQUENCE ELT &optional TESTFN)") (autoload 'seq-uniq "seq-25" "Return a list of the elements of SEQUENCE with duplicates removed.
+TESTFN is used to compare elements, and defaults to `equal'.
+
+(fn SEQUENCE &optional TESTFN)") (autoload 'seq-union "seq-25" "Return a list of all the elements that appear in either SEQUENCE1 or SEQUENCE2.
+\"Equality\" of elements is defined by the function TESTFN, which
+defaults to `equal'.
+
+(fn SEQUENCE1 SEQUENCE2 &optional TESTFN)") (autoload 'seq-intersection "seq-25" "Return a list of all the elements that appear in both SEQUENCE1 and SEQUENCE2.
+\"Equality\" of elements is defined by the function TESTFN, which
+defaults to `equal'.
+
+(fn SEQUENCE1 SEQUENCE2 &optional TESTFN)") (autoload 'seq-group-by "seq-25" "Apply FUNCTION to each element of SEQUENCE.
+Separate the elements of SEQUENCE into an alist using the results as
+keys.  Keys are compared using `equal'.
+
+(fn FUNCTION SEQUENCE)") (autoload 'seq-max "seq-25" "Return the largest element of SEQUENCE.
+SEQUENCE must be a sequence of numbers or markers.
+
+(fn SEQUENCE)") (autoload 'seq-random-elt "seq-25" "Return a randomly chosen element from SEQUENCE.
+Signal an error if SEQUENCE is empty.
+
+(fn SEQUENCE)") (register-definition-prefixes "seq-25" '("seq-")) (provide 'seq-autoloads)) "compat" ((compat-autoloads compat compat-pkg compat-macs compat-30 compat-29 compat-28 compat-27 compat-26 compat-25) (register-definition-prefixes "compat" '("compat-")) (register-definition-prefixes "compat-macs" '("compat-")) (provide 'compat-autoloads)) "nerd-icons" ((nerd-icons-autoloads nerd-icons nerd-icons-faces) (autoload 'nerd-icons-install-fonts "nerd-icons" "Helper function to download and install the latests fonts based on OS.
+The provided Nerd Font is Symbols Nerd Font Mono.
+When PFX is non-nil, ignore the prompt and just install
+
+(fn &optional PFX)" t) (autoload 'nerd-icons-insert "nerd-icons" "Interactive icon insertion function.
+When Prefix ARG is non-nil, insert the propertized icon.
+When GLYPH-SET is non-nil, limit the candidates to the icon set matching it.
+
+(fn &optional ARG GLYPH-SET)" t) (autoload 'nerd-icons-icon-for-dir "nerd-icons" "Get the formatted icon for DIR.
+ARG-OVERRIDES should be a plist containining `:height',
+`:v-adjust' or `:face' properties like in the normal icon
+inserting functions.
+Note: You want chevron, please use `nerd-icons-icon-for-dir-with-chevron'.
+
+(fn DIR &rest ARG-OVERRIDES)") (autoload 'nerd-icons-icon-for-file "nerd-icons" "Get the formatted icon for FILE.
+ARG-OVERRIDES should be a plist containining `:height',
+`:v-adjust' or `:face' properties like in the normal icon
+inserting functions.
+
+(fn FILE &rest ARG-OVERRIDES)") (autoload 'nerd-icons-icon-for-mode "nerd-icons" "Get the formatted icon for MODE.
+ARG-OVERRIDES should be a plist containining `:height',
+`:v-adjust' or `:face' properties like in the normal icon
+inserting functions.
+
+(fn MODE &rest ARG-OVERRIDES)") (autoload 'nerd-icons-icon-for-url "nerd-icons" "Get the formatted icon for URL.
+If an icon for URL isn't found in `nerd-icons-url-alist', a globe is used.
+ARG-OVERRIDES should be a plist containining `:height',
+`:v-adjust' or `:face' properties like in the normal icon
+inserting functions.
+
+(fn URL &rest ARG-OVERRIDES)") (autoload 'nerd-icons-icon-for-buffer "nerd-icons" "Get the formatted icon for the current buffer.
+
+This function prioritises the use of the buffers file extension to
+discern the icon when its `major-mode' matches its auto mode,
+otherwise it will use the buffers `major-mode' to decide its
+icon.") (register-definition-prefixes "nerd-icons" '("nerd-icons-")) (provide 'nerd-icons-autoloads)) "s" ((s-autoloads s) (register-definition-prefixes "s" '("s-")) (provide 's-autoloads)) "dash" ((dash-autoloads dash dash-pkg dash-functional \.dir-locals) (autoload 'dash-fontify-mode "dash" "Toggle fontification of Dash special variables.
+
+Dash-Fontify mode is a buffer-local minor mode intended for Emacs
+Lisp buffers.  Enabling it causes the special variables bound in
+anaphoric Dash macros to be fontified.  These anaphoras include
+`it', `it-index', `acc', and `other'.  In older Emacs versions
+which do not dynamically detect macros, Dash-Fontify mode
+additionally fontifies Dash macro calls.
+
+See also `dash-fontify-mode-lighter' and
+`global-dash-fontify-mode'.
+
+This is a minor mode.  If called interactively, toggle the `Dash-Fontify
+mode' mode.  If the prefix argument is positive, enable the mode, and if
+it is zero or negative, disable the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable the
+mode if ARG is nil, omitted, or is a positive number.  Disable the mode
+if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate the variable `dash-fontify-mode'.
+
+The mode's hook is called both when the mode is enabled and when it is
+disabled.
+
+(fn &optional ARG)" t) (put 'global-dash-fontify-mode 'globalized-minor-mode t) (defvar global-dash-fontify-mode nil "Non-nil if Global Dash-Fontify mode is enabled.
+See the `global-dash-fontify-mode' command
+for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `global-dash-fontify-mode'.") (custom-autoload 'global-dash-fontify-mode "dash" nil) (autoload 'global-dash-fontify-mode "dash" "Toggle Dash-Fontify mode in all buffers.
+With prefix ARG, enable Global Dash-Fontify mode if ARG is positive;
+otherwise, disable it.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.
+Enable the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+Dash-Fontify mode is enabled in all buffers where
+`dash--turn-on-fontify-mode' would do it.
+
+See `dash-fontify-mode' for more information on Dash-Fontify mode.
+
+(fn &optional ARG)" t) (autoload 'dash-register-info-lookup "dash" "Register the Dash Info manual with `info-lookup-symbol'.
+This allows Dash symbols to be looked up with \\[info-lookup-symbol]." t) (register-definition-prefixes "dash" '("!cdr" "!cons" "--" "->" "-a" "-butlast" "-c" "-d" "-e" "-f" "-gr" "-i" "-juxt" "-keep" "-l" "-m" "-no" "-o" "-p" "-r" "-s" "-t" "-u" "-value-to-list" "-when-let" "-zip" "dash-")) (provide 'dash-autoloads)) "f" ((f-autoloads f f-shortdoc) (register-definition-prefixes "f" '("f-")) (provide 'f-autoloads)) "shrink-path" ((shrink-path-autoloads shrink-path) (register-definition-prefixes "shrink-path" '("shrink-path-")) (provide 'shrink-path-autoloads)) "doom-modeline" ((doom-modeline-autoloads doom-modeline doom-modeline-segments doom-modeline-env doom-modeline-core) (autoload 'doom-modeline-set-main-modeline "doom-modeline" "Set main mode-line.
+If DEFAULT is non-nil, set the default mode-line for all buffers.
+
+(fn &optional DEFAULT)") (defvar doom-modeline-mode nil "Non-nil if Doom-Modeline mode is enabled.
+See the `doom-modeline-mode' command
+for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `doom-modeline-mode'.") (custom-autoload 'doom-modeline-mode "doom-modeline" nil) (autoload 'doom-modeline-mode "doom-modeline" "Toggle `doom-modeline' on or off.
+
+This is a global minor mode.  If called interactively, toggle the
+`Doom-Modeline mode' mode.  If the prefix argument is positive, enable
+the mode, and if it is zero or negative, disable the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable the
+mode if ARG is nil, omitted, or is a positive number.  Disable the mode
+if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `(default-value \\='doom-modeline-mode)'.
+
+The mode's hook is called both when the mode is enabled and when it is
+disabled.
+
+(fn &optional ARG)" t) (register-definition-prefixes "doom-modeline" '("doom-modeline-")) (register-definition-prefixes "doom-modeline-core" '("doom-modeline")) (autoload 'doom-modeline-env-setup-python "doom-modeline-env") (autoload 'doom-modeline-env-setup-ruby "doom-modeline-env") (autoload 'doom-modeline-env-setup-perl "doom-modeline-env") (autoload 'doom-modeline-env-setup-go "doom-modeline-env") (autoload 'doom-modeline-env-setup-elixir "doom-modeline-env") (autoload 'doom-modeline-env-setup-rust "doom-modeline-env") (register-definition-prefixes "doom-modeline-env" '("doom-modeline-")) (register-definition-prefixes "doom-modeline-segments" '("doom-modeline-")) (provide 'doom-modeline-autoloads))))
+
+#s(hash-table test eq data (org-elpa #s(hash-table test equal data (version (16 "https://github.com/emacs-straight/org-mode.git") "use-package" nil "bind-key" nil "diminish" nil "evil" nil "cl-lib" nil "goto-chg" nil "evil-collection" nil "annalist" nil "ultra-scroll" nil "go-mode" nil "rust-mode" nil "doom-modeline" nil "compat" nil "seq" nil "nerd-icons" nil "shrink-path" nil "s" nil "dash" nil "f" nil)) melpa #s(hash-table test equal data (version 3 "use-package" nil "bind-key" nil "diminish" nil "evil" nil "cl-lib" nil "goto-chg" nil "evil-collection" nil "annalist" nil "ultra-scroll" nil "go-mode" nil "rust-mode" nil "doom-modeline" nil "compat" nil "seq" nil "nerd-icons" nil "shrink-path" nil "s" nil "dash" nil "f" nil)) gnu-elpa-mirror #s(hash-table test equal data (version 3 "use-package" (use-package :type git :host github :repo "emacs-straight/use-package" :files ("*" (:exclude ".git"))) "bind-key" (bind-key :type git :host github :repo "emacs-straight/bind-key" :files ("*" (:exclude ".git"))) "diminish" (diminish :type git :host github :repo "emacs-straight/diminish" :files ("*" (:exclude ".git"))) "evil" nil "cl-lib" nil "goto-chg" nil "evil-collection" nil "annalist" nil "ultra-scroll" nil "go-mode" nil "rust-mode" nil "doom-modeline" nil "compat" (compat :type git :host github :repo "emacs-straight/compat" :files ("*" (:exclude ".git"))) "seq" (seq :type git :host github :repo "emacs-straight/seq" :files ("*" (:exclude ".git"))) "nerd-icons" nil "shrink-path" nil "s" nil "dash" (dash :type git :host github :repo "emacs-straight/dash" :files ("*" (:exclude ".git"))) "f" nil)) nongnu-elpa #s(hash-table test equal data (version (5 "https://github.com/emacsmirror/nongnu_elpa.git") "evil" (evil :repo "https://github.com/emacs-evil/evil" :files (:defaults (:exclude "COPYING" "lib" "scripts"))) "cl-lib" nil "goto-chg" (goto-chg :repo "https://github.com/emacs-evil/goto-chg" :files (:defaults (:exclude "LICENSE"))) "evil-collection" nil "annalist" nil "ultra-scroll" nil "go-mode" (go-mode :repo "https://github.com/dominikh/go-mode.el" :files (:defaults (:exclude "generate_authors.sh"))) "rust-mode" (rust-mode :repo "https://github.com/rust-lang/rust-mode" :files (:defaults (:exclude "test-*" "triagebot.toml" "*.sh"))) "doom-modeline" nil "nerd-icons" nil "shrink-path" nil "s" nil "f" nil)) el-get #s(hash-table test equal data (version 2 "cl-lib" nil "evil-collection" nil "annalist" nil "ultra-scroll" nil "doom-modeline" `(doom-modeline :type git :host github :repo "seagle0128/doom-modeline" :files (:defaults)) "nerd-icons" nil "shrink-path" `(shrink-path :type git :repo "https://gitlab.com/bennya/shrink-path.el.git" :files (:defaults)) "s" `(s :type git :host github :repo "magnars/s.el" :files (:defaults)) "f" `(f :type git :host github :repo "rejeep/f.el" :files (:defaults)))) emacsmirror-mirror #s(hash-table test equal data (version 2 "cl-lib" nil "evil-collection" (evil-collection :type git :host github :repo "emacsmirror/evil-collection") "annalist" (annalist :type git :host github :repo "emacsmirror/annalist") "ultra-scroll" (ultra-scroll :type git :host github :repo "emacsmirror/ultra-scroll") "nerd-icons" (nerd-icons :type git :host github :repo "emacsmirror/nerd-icons")))))
+
+("f" "dash" "s" "shrink-path" "seq" "compat" "doom-modeline" "nerd-icons" "rust-mode" "go-mode" "annalist" "evil-collection" "nadvice" "goto-chg" "cl-lib" "evil" "diminish" "bind-key" "use-package" "emacsmirror-mirror" "el-get" "nongnu-elpa" "gnu-elpa-mirror" "melpa" "org-elpa" "emacs" "straight")
 
 t

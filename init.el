@@ -86,6 +86,7 @@
 					:background "#004344"   ;; Dark teal background
 					:foreground "#8affff"   ;; Bright cyan text
 					:box nil)			   ;; Remove border
+					;;:box '(:line-width 3 :color "#004344"))  ;; Add padding for icons
 (set-face-attribute 'mode-line-inactive nil
 					:background "#003030"   ;; Darker background for inactive
 					:foreground "#808080"   ;; Gray text for inactive
@@ -277,3 +278,15 @@
 ;; =====================================
 
 (load (expand-file-name "config/evil.el" user-emacs-directory))
+
+;; =====================================
+;; 🔨 IDE Features
+;; =====================================
+
+(load (expand-file-name "config/ide.el" user-emacs-directory))
+
+;; =====================================
+;; 🔫 DOOM Modeline
+;; =====================================
+
+(load (expand-file-name "config/modeline.el" user-emacs-directory))
