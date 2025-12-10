@@ -1,0 +1,51 @@
+# Auto-save files
+auto-save-list/
+
+# Native compilation cache
+eln-cache/
+
+# Straight.el package manager
+straight/build/
+straight/build-cache.el
+straight/repos/
+
+# Emacs backup files
+*~
+\#*\#
+.\#*
+
+# Compiled files
+*.elc
+
+# Transient files
+transient/
+
+# Network security
+network-security.data
+
+# Org mode
+.org-id-locations
+org-clock-save.el
+
+# Project files
+.projectile
+projectile-bookmarks.eld
+projectile.cache
+
+# Recentf
+recentf
+
+# Session files
+session.*
+.session
+
+# Bookmarks
+bookmarks
+
+# TAGS
+TAGS
+
+# Other
+.cache/
+.local/
+var/
