@@ -298,9 +298,9 @@
 (setq doom-modeline-after-update-env-hook nil)
 
 ;; Prevent evil state icons from being bold in active modeline
+;; Only set evil state faces to normal, not the base doom-modeline face
 (with-eval-after-load 'doom-modeline
-  (dolist (face '(doom-modeline
-                  doom-modeline-evil-emacs-state
+  (dolist (face '(doom-modeline-evil-emacs-state
                   doom-modeline-evil-insert-state
                   doom-modeline-evil-motion-state
                   doom-modeline-evil-normal-state
