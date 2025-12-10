@@ -101,11 +101,72 @@
 ;; Enable electric-indent for auto-indenting on RET
 (electric-indent-mode 1)
 
-;; Set tab-width to 4 globally (setq-default applies to all buffers)
-(setq-default tab-width 4)
+;; =====================================
+;; I LOVE TABS
+;; =====================================
 
-;; Use TAB characters when indenting
-(setq-default indent-tabs-mode t)
+;; Global tab settings
+(setq-default indent-tabs-mode t)  ;; Use tabs, not spaces
+(setq-default tab-width 4)         ;; Display tabs as 4 spaces wide
+(setq-default tab-stop-list (number-sequence 4 200 4))  ;; Tab stops every 4 spaces
+
+;; Don't convert tabs to spaces when deleting
+(setq backward-delete-char-untabify-method nil)
+
+;; Enforce tabs in all major modes (many modes override indent-tabs-mode)
+(defun enforce-tabs ()
+  "Force use of tabs for indentation in all modes."
+  (setq indent-tabs-mode t)
+  (setq tab-width 4)
+  ;; Make TAB key insert a tab character instead of smart-indenting
+  (local-set-key (kbd "TAB") 'tab-to-tab-stop))
+
+;; Apply to all major modes
+(add-hook 'prog-mode-hook 'enforce-tabs)
+(add-hook 'text-mode-hook 'enforce-tabs)
+(add-hook 'conf-mode-hook 'enforce-tabs)
+
+;; Configure mode-specific indentation offsets to match tab-width
+;; This ensures electric-indent uses the right width for ALL major languages
+(setq-default c-basic-offset 4)              ;; C, C++, Java, PHP
+(setq-default js-indent-level 4)             ;; JavaScript, JSON
+(setq-default typescript-indent-level 4)     ;; TypeScript
+(setq-default css-indent-offset 4)           ;; CSS
+(setq-default sh-basic-offset 4)             ;; Shell scripts
+(setq-default python-indent-offset 4)        ;; Python
+(setq-default rust-indent-offset 4)          ;; Rust
+(setq-default ruby-indent-level 4)           ;; Ruby
+(setq-default perl-indent-level 4)           ;; Perl
+(setq-default lua-indent-level 4)            ;; Lua
+(setq-default go-ts-mode-indent-offset 4)    ;; Go (tree-sitter)
+(setq-default haskell-indent-offset 4)       ;; Haskell
+(setq-default haskell-indentation-left-offset 4)
+(setq-default swift-mode:basic-offset 4)     ;; Swift
+(setq-default kotlin-tab-width 4)            ;; Kotlin
+(setq-default scala-indent:step 4)           ;; Scala
+(setq-default lisp-indent-offset 4)          ;; Lisp, Scheme
+(setq-default sgml-basic-offset 4)           ;; HTML, XML
+(setq-default nxml-child-indent 4)           ;; XML (nxml-mode)
+(setq-default web-mode-markup-indent-offset 4)   ;; Web-mode HTML
+(setq-default web-mode-css-indent-offset 4)      ;; Web-mode CSS
+(setq-default web-mode-code-indent-offset 4)     ;; Web-mode JS/etc
+(setq-default yaml-indent-offset 4)          ;; YAML
+(setq-default standard-indent 4)             ;; Fallback for other modes
+
+;; Make sure electric-indent respects tabs
+(setq electric-indent-inhibit nil)
+
+;; Force conversion of spaces to tabs after indentation
+(defun tabify-current-line ()
+  "Convert leading spaces to tabs on the current line."
+  (when indent-tabs-mode
+    (save-excursion
+      (beginning-of-line)
+      (when (looking-at "[ \t]+")
+        (tabify (point) (match-end 0))))))
+
+;; Run after electric-indent
+(add-hook 'post-self-insert-hook 'tabify-current-line)
 
 ;; =====================================
 ;; Whitespace Visualization (listchars)
