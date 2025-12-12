@@ -98,6 +98,16 @@
 (set-face-attribute 'vertical-border nil
 					:foreground "#74c4c4")	;; Window divider color
 
+;; Configure internal border (gray bar around frame in GUI)
+;; (set-face-attribute 'internal-border nil
+;;					:background "#002323")
+
+;; Configure header-line (bar at top of buffers like C-x C-b)
+(set-face-attribute 'header-line nil
+					:background "#002323"
+					:foreground "#8affff"
+					:box nil)
+
 ;; =====================================
 ;; 🔧 Editing Behavior
 ;; =====================================
