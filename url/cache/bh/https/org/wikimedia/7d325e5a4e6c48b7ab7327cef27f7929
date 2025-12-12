@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+cache-control: s-maxage=864000, max-age=86400
+content-type: image/svg+xml; charset=utf-8; profile="https://www.mediawiki.org/wiki/Specs/SVG/1.0.0"
+x-resource-location: 46e5b5b462e546b1d3d7e5f9a23efece405b2e78
+access-control-allow-origin: *
+access-control-allow-methods: GET,HEAD
+access-control-allow-headers: accept, content-type, content-length, cache-control, accept-language, api-user-agent, if-match, if-modified-since, if-none-match, dnt, accept-encoding
+access-control-expose-headers: etag
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+referrer-policy: origin-when-cross-origin
+x-xss-protection: 1; mode=block
+content-security-policy: default-src 'none'; media-src *; img-src *; style-src *;frame-ancestors 'self'
+x-content-security-policy: default-src 'none'; media-src *; img-src *; style-src *;frame-ancestors 'self'
+x-webkit-csp: default-src 'none'; media-src *; img-src *; style-src *;frame-ancestors 'self'
+server: restbase2027
+date: Wed, 10 Dec 2025 14:40:11 GMT
+age: 6623
+accept-ranges: bytes
+vary: , Accept-Encoding
+x-cache: cp5017 miss, cp5017 hit/7
+x-cache-status: hit-front
+server-timing: cache;desc="hit-front", host;desc="cp5017"
+strict-transport-security: max-age=106384710; includeSubDomains; preload
+report-to: { "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+nel: { "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction": 0.0}
+set-cookie: WMF-Last-Access=10-Dec-2025;Path=/;HttpOnly;secure;Expires=Sun, 11 Jan 2026 12:00:00 GMT
+set-cookie: WMF-Last-Access-Global=10-Dec-2025;Path=/;Domain=.wikimedia.org;HttpOnly;secure;Expires=Sun, 11 Jan 2026 12:00:00 GMT
+x-client-ip: 180.190.38.11
+set-cookie: GeoIP=PH:03:San_Juan:15.74:120.63:v4; Path=/; secure; Domain=.wikimedia.org
+set-cookie: NetworkProbeLimit=0.001;Path=/;Secure;SameSite=None;Max-Age=3600
+content-length: 692
+x-request-id: 89b70bb8-18e3-479a-be99-b5c71809429e
+x-analytics: 
+
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.971ex" height="2.343ex" style="vertical-align: -0.505ex;" viewBox="0 -791.3 1279 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">{\displaystyle -2}</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMAIN-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path>
+<path stroke-width="1" id="E1-MJMAIN-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMAIN-2212" x="0" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-32" x="778" y="0"></use>
+</g>
+</svg>

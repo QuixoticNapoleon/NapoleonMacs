@@ -1,1 +1,0 @@
-/home/bh/.config/emacs/straight/repos/goto-chg/goto-chg.el

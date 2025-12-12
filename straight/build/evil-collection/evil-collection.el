@@ -1,1 +1,0 @@
-/home/bh/.config/emacs/straight/repos/evil-collection/evil-collection.el

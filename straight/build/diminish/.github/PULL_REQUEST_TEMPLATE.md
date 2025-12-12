@@ -1,1 +1,0 @@
-/home/bh/.config/emacs/straight/repos/diminish/.github/PULL_REQUEST_TEMPLATE.md

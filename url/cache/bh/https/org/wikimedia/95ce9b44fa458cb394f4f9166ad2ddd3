@@ -1,0 +1,44 @@
+HTTP/1.1 200 OK
+cache-control: s-maxage=864000, max-age=86400
+content-type: image/svg+xml; charset=utf-8; profile="https://www.mediawiki.org/wiki/Specs/SVG/1.0.0"
+x-resource-location: 32769037c408874e1890f77554c65f39c523ebe2
+access-control-allow-origin: *
+access-control-allow-methods: GET,HEAD
+access-control-allow-headers: accept, content-type, content-length, cache-control, accept-language, api-user-agent, if-match, if-modified-since, if-none-match, dnt, accept-encoding
+access-control-expose-headers: etag
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+referrer-policy: origin-when-cross-origin
+x-xss-protection: 1; mode=block
+content-security-policy: default-src 'none'; media-src *; img-src *; style-src *;frame-ancestors 'self'
+x-content-security-policy: default-src 'none'; media-src *; img-src *; style-src *;frame-ancestors 'self'
+x-webkit-csp: default-src 'none'; media-src *; img-src *; style-src *;frame-ancestors 'self'
+server: restbase2029
+date: Wed, 10 Dec 2025 15:17:50 GMT
+age: 4363
+accept-ranges: bytes
+vary: , Accept-Encoding
+x-cache: cp5017 miss, cp5017 hit/22
+x-cache-status: hit-front
+server-timing: cache;desc="hit-front", host;desc="cp5017"
+strict-transport-security: max-age=106384710; includeSubDomains; preload
+report-to: { "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+nel: { "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction": 0.0}
+set-cookie: WMF-Last-Access=10-Dec-2025;Path=/;HttpOnly;secure;Expires=Sun, 11 Jan 2026 12:00:00 GMT
+set-cookie: WMF-Last-Access-Global=10-Dec-2025;Path=/;Domain=.wikimedia.org;HttpOnly;secure;Expires=Sun, 11 Jan 2026 12:00:00 GMT
+x-client-ip: 180.190.38.11
+set-cookie: GeoIP=PH:03:San_Juan:15.74:120.63:v4; Path=/; secure; Domain=.wikimedia.org
+set-cookie: NetworkProbeLimit=0.001;Path=/;Secure;SameSite=None;Max-Age=3600
+content-length: 473
+x-request-id: 8dd032de-2774-450e-926b-fa034ace30a5
+x-analytics: 
+
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.936ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 833.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">{\displaystyle \Delta }</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMAIN-394" d="M51 0Q46 4 46 7Q46 9 215 357T388 709Q391 716 416 716Q439 716 444 709Q447 705 616 357T786 7Q786 4 781 0H51ZM507 344L384 596L137 92L383 91H630Q630 93 507 344Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMAIN-394" x="0" y="0"></use>
+</g>
+</svg>

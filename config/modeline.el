@@ -6,14 +6,14 @@
   :config
   ;; Fix missing data symlink (straight.el doesn't create it automatically)
   (let ((data-link (expand-file-name "straight/build/nerd-icons/data" user-emacs-directory))
-        (data-source (expand-file-name "straight/repos/nerd-icons/data" user-emacs-directory)))
-    (unless (file-exists-p data-link)
-      (when (file-exists-p data-source)
-        (make-symbolic-link data-source data-link))))
+		(data-source (expand-file-name "straight/repos/nerd-icons/data" user-emacs-directory)))
+	(unless (file-exists-p data-link)
+	  (when (file-exists-p data-source)
+		(make-symbolic-link data-source data-link))))
   ;; Prevent icons from becoming bold in active modeline
   (dolist (face (face-list))
-    (when (string-prefix-p "nerd-icons-" (symbol-name face))
-      (set-face-attribute face nil :weight 'normal))))
+	(when (string-prefix-p "nerd-icons-" (symbol-name face))
+	  (set-face-attribute face nil :weight 'normal))))
 
 ;; Adjust icon scale to prevent cutoff
 (setq nerd-icons-scale-factor 1.0)
@@ -51,7 +51,7 @@
 ;; (setq doom-modeline-spc-face-overrides nil)
 ;; (setq doom-modeline-spc-face-overrides nil)
 (setq doom-modeline-spc-face-overrides
-      (list :family (face-attribute 'fixed-pitch :family)))
+	  (list :family (face-attribute 'fixed-pitch :family)))
 
 ;; How to detect the project root.
 ;; nil means to use `default-directory'.
@@ -64,19 +64,19 @@
 ;; Determines the style used by `doom-modeline-buffer-file-name'.
 ;;
 ;; Given ~/Projects/FOSS/emacs/lisp/comint.el
-;;   auto => emacs/l/comint.el (in a project) or comint.el
-;;   truncate-upto-project => ~/P/F/emacs/lisp/comint.el
-;;   truncate-from-project => ~/Projects/FOSS/emacs/l/comint.el
-;;   truncate-with-project => emacs/l/comint.el
-;;   truncate-except-project => ~/P/F/emacs/l/comint.el
-;;   truncate-upto-root => ~/P/F/e/lisp/comint.el
-;;   truncate-all => ~/P/F/e/l/comint.el
-;;   truncate-nil => ~/Projects/FOSS/emacs/lisp/comint.el
-;;   relative-from-project => emacs/lisp/comint.el
-;;   relative-to-project => lisp/comint.el
-;;   file-name => comint.el
-;;   file-name-with-project => FOSS|comint.el
-;;   buffer-name => comint.el<2> (uniquify buffer name)
+;;	 auto => emacs/l/comint.el (in a project) or comint.el
+;;	 truncate-upto-project => ~/P/F/emacs/lisp/comint.el
+;;	 truncate-from-project => ~/Projects/FOSS/emacs/l/comint.el
+;;	 truncate-with-project => emacs/l/comint.el
+;;	 truncate-except-project => ~/P/F/emacs/l/comint.el
+;;	 truncate-upto-root => ~/P/F/e/lisp/comint.el
+;;	 truncate-all => ~/P/F/e/l/comint.el
+;;	 truncate-nil => ~/Projects/FOSS/emacs/lisp/comint.el
+;;	 relative-from-project => emacs/lisp/comint.el
+;;	 relative-to-project => lisp/comint.el
+;;	 file-name => comint.el
+;;	 file-name-with-project => FOSS|comint.el
+;;	 buffer-name => comint.el<2> (uniquify buffer name)
 ;;
 ;; If you are experiencing the laggy issue, especially while editing remote files
 ;; with tramp, please try `file-name' style.
@@ -183,10 +183,10 @@
 ;; See `vc-state' for possible values of the state.
 ;; For states not explicitly listed, the `doom-modeline-vcs-default' face is used.
 (setq doom-modeline-vcs-state-faces-alist
-      '((needs-update . (doom-modeline-warning bold))
-        (removed . (doom-modeline-urgent bold))
-        (conflict . (doom-modeline-urgent bold))
-        (unregistered . (doom-modeline-urgent bold))))
+	  '((needs-update . (doom-modeline-warning bold))
+		(removed . (doom-modeline-urgent bold))
+		(conflict . (doom-modeline-urgent bold))
+		(unregistered . (doom-modeline-urgent bold))))
 
 ;; Whether display the icon of check segment. It respects option `doom-modeline-icon'.
 (setq doom-modeline-check-icon t)
@@ -307,11 +307,11 @@
 ;; Only set evil state faces to normal, not the base doom-modeline face
 (with-eval-after-load 'doom-modeline
   (dolist (face '(doom-modeline-evil-emacs-state
-                  doom-modeline-evil-insert-state
-                  doom-modeline-evil-motion-state
-                  doom-modeline-evil-normal-state
-                  doom-modeline-evil-operator-state
-                  doom-modeline-evil-visual-state
-                  doom-modeline-evil-replace-state
-                  doom-modeline-evil-user-state))
-    (set-face-attribute face nil :weight 'normal)))
+				  doom-modeline-evil-insert-state
+				  doom-modeline-evil-motion-state
+				  doom-modeline-evil-normal-state
+				  doom-modeline-evil-operator-state
+				  doom-modeline-evil-visual-state
+				  doom-modeline-evil-replace-state
+				  doom-modeline-evil-user-state))
+	(set-face-attribute face nil :weight 'normal)))
