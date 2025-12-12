@@ -7,6 +7,16 @@
 ;; Maximize GC threshold during startup (restored in init.el)
 (setq gc-cons-threshold most-positive-fixnum)
 
+
+;; =====================================
+;; 🎨 Terafox Theme
+;; =====================================
+
+;; Add config directory to theme path
+(add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
+(load-theme 'terafox-emacs t)
+
+
 ;; =====================================
 ;; 🎨 UI Configuration (Pre-GUI Init)
 ;; =====================================
