@@ -4,6 +4,12 @@
 ;;(use-package nerd-icons)
 (use-package nerd-icons
   :config
+  ;; Fix missing data symlink (straight.el doesn't create it automatically)
+  (let ((data-link (expand-file-name "straight/build/nerd-icons/data" user-emacs-directory))
+        (data-source (expand-file-name "straight/repos/nerd-icons/data" user-emacs-directory)))
+    (unless (file-exists-p data-link)
+      (when (file-exists-p data-source)
+        (make-symbolic-link data-source data-link))))
   ;; Prevent icons from becoming bold in active modeline
   (dolist (face (face-list))
     (when (string-prefix-p "nerd-icons-" (symbol-name face))
