@@ -296,6 +296,18 @@
 (load (expand-file-name "config/evil.el" user-emacs-directory))
 
 ;; =====================================
+;; 🔍 Completion Framework
+;; =====================================
+
+(load (expand-file-name "config/completion.el" user-emacs-directory))
+
+;; =====================================
+;; 🗹 Dashbaord
+;; =====================================
+
+(load (expand-file-name "config/dashboard.el" user-emacs-directory))
+
+;; =====================================
 ;; 🔨 IDE Features
 ;; =====================================
 
