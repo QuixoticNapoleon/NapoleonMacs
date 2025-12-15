@@ -1,4 +1,5 @@
 ;; Dashboard - Startup screen
+
 (use-package dashboard
 	:config
 	;; Use text banner from file
@@ -15,6 +16,23 @@
 						:height 1.2
 						:foreground "#8affff"
 						:weight 'bold)
+
+	;; Customize section heading colors (Recent Files, Projects, etc.)
+	(set-face-attribute 'dashboard-heading nil
+						:foreground "#ffc600"
+						:weight 'bold)
+
+	;; Enable Nerd Font icons
+	(setq dashboard-icon-type 'nerd-icons)
+	(setq dashboard-set-heading-icons t)
+	(setq dashboard-set-file-icons t)
+
+	;; Customize heading icons (optional - comment out to use defaults)
+	 (setq dashboard-heading-icons '((recents   . "nf-oct-history")
+									(bookmarks . "nf-oct-bookmark")
+									(projects  . "nf-oct-rocket")
+									(agenda    . "nf-oct-calendar")
+									(registers . "nf-oct-database")))
 
 	;; Center content
 	(setq dashboard-center-content t)

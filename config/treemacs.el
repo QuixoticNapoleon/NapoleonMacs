@@ -55,3 +55,8 @@
   (set-face-attribute 'treemacs-nerd-icons-file-face nil
 					  :foreground "#74c4c4"
 					  :inherit 'unspecified))
+
+;; Dired integration - adds nerd-icons to dired buffers
+(use-package nerd-icons-dired
+  :hook
+  (dired-mode . nerd-icons-dired-mode))

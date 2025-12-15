@@ -19,19 +19,19 @@
 ;; Bootstrap straight.el from XDG config directory
 (defvar bootstrap-version)
 (let* ((user-dir (file-name-as-directory
-				  (or (getenv "XDG_CONFIG_HOME") "~/.config/")))
-	   (emacs-dir (concat user-dir "emacs/"))
-	   (bootstrap-file
+			(or (getenv "XDG_CONFIG_HOME") "~/.config/")))
+		(emacs-dir (concat user-dir "emacs/"))
+		(bootstrap-file
 		(expand-file-name "straight/repos/straight.el/bootstrap.el" emacs-dir))
-	   (bootstrap-version 6))
-  (unless (file-exists-p bootstrap-file)
+	(bootstrap-version 6))
+(unless (file-exists-p bootstrap-file)
 	(with-current-buffer
 		(url-retrieve-synchronously
 		 "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
 		 'silent 'inhibit-cookies)
-	  (goto-char (point-max))
-	  (eval-print-last-sexp)))
-  (load bootstrap-file nil 'nomessage))
+		(goto-char (point-max))
+		(eval-print-last-sexp)))
+(load bootstrap-file nil 'nomessage))
 
 ;; Freeze File
 (setq straight-freeze-file (expand-file-name "versions.el" user-emacs-directory))
@@ -43,6 +43,14 @@
 ;; Essential use-package utilities
 (use-package diminish)	;; Hide/abbreviate minor modes
 (use-package bind-key)	;; Key binding utilities
+
+;; Nerd Icons - icon library (must be loaded early)
+(use-package nerd-icons
+  :if (display-graphic-p))
+
+;; All The Icons - alternative icon library (for compatibility)
+(use-package all-the-icons
+  :if (display-graphic-p))
 
 ;; =====================================
 ;; 🎨 UI & Visual Configuration
@@ -58,9 +66,9 @@
 
 ;; Disable startup messages and bell
 (setq inhibit-startup-screen t
-	  inhibit-startup-message t
-	  inhibit-startup-echo-area-message t
-	  ring-bell-function 'ignore)
+	inhibit-startup-message t
+	inhibit-startup-echo-area-message t
+	ring-bell-function 'ignore)
 
 ;; Configure line numbers with themed colors
 ;; Only show line numbers in text/code buffers, not special buffers (treemacs, magit, etc.)
@@ -68,35 +76,35 @@
 (add-hook 'text-mode-hook 'display-line-numbers-mode)
 (setq display-line-numbers-type 'relative)	;; Relative line numbers for Evil mode
 (set-face-attribute 'line-number nil
-					:foreground "#4fa8a8"	;; Softer cyan for line numbers
-					:background "#003636")
+	:foreground "#4fa8a8"	;; Softer cyan for line numbers
+	:background "#003636")
 (set-face-attribute 'line-number-current-line nil
-					:foreground "#8affff"	;; Bright cyan for current line
-					:background "#003636"
-					:weight 'bold)
+	:foreground "#8affff"	;; Bright cyan for current line
+	:background "#003636"
+	:weight 'bold)
 (set-face-attribute 'fringe nil :background "#003636")
 
 ;; Configure cursor and selection colors
 (set-face-attribute 'cursor nil
-					:background "#FFC600")	;; Yellow/gold cursor
+	:background "#FFC600")	;; Yellow/gold cursor
 (set-face-attribute 'region nil
-					:background "#395e5e"	;; Dark teal selection
-					:foreground 'unspecified)  ;; Keep text color unchanged
+	:background "#395e5e"	;; Dark teal selection
+	:foreground 'unspecified)  ;; Keep text color unchanged
 
 ;; Configure mode-line colors
 (set-face-attribute 'mode-line nil
-					:background "#004344"	;; Dark teal background
-					:foreground "#8affff"	;; Bright cyan text
-					:box nil)			   ;; Remove border
+	:background "#004344"	;; Dark teal background
+	:foreground "#8affff"	;; Bright cyan text
+	:box nil)			   ;; Remove border
 ;;:box '(:line-width 3 :color "#004344"))  ;; Add padding for icons
 (set-face-attribute 'mode-line-inactive nil
-					:background "#003030"	;; Darker background for inactive
-					:foreground "#808080"	;; Gray text for inactive
-					:box nil)			   ;; Remove border
+	:background "#003030"	;; Darker background for inactive
+	:foreground "#808080"	;; Gray text for inactive
+	:box nil)			   ;; Remove border
 
 ;; Configure window divider color (between buffers)
 (set-face-attribute 'vertical-border nil
-					:foreground "#74c4c4")	;; Window divider color
+	:foreground "#74c4c4")	;; Window divider color
 
 ;; Configure internal border (gray bar around frame in GUI)
 ;; (set-face-attribute 'internal-border nil
@@ -104,9 +112,9 @@
 
 ;; Configure header-line (bar at top of buffers like C-x C-b)
 (set-face-attribute 'header-line nil
-					:background "#002323"
-					:foreground "#8affff"
-					:box nil)
+	:background "#002323"
+	:foreground "#8affff"
+	:box nil)
 
 ;; =====================================
 ;; 🔧 Editing Behavior
@@ -117,6 +125,11 @@
 
 ;; Enable electric-indent for auto-indenting on RET
 (electric-indent-mode 1)
+
+;; Track recently opened files for dashboard
+(recentf-mode 1)
+(setq recentf-max-saved-items 50)		;; Save up to 50 recent files
+(setq recentf-max-menu-items 15)		;; Show 15 in menu
 
 ;; =====================================
 ;; I LOVE TABS
@@ -132,11 +145,11 @@
 
 ;; Enforce tabs in all major modes (many modes override indent-tabs-mode)
 (defun enforce-tabs ()
-  "Force use of tabs for indentation in all modes."
-  (setq indent-tabs-mode t)
-  (setq tab-width 4)
-  ;; Make TAB key insert a tab character instead of smart-indenting
-  (local-set-key (kbd "TAB") 'tab-to-tab-stop))
+	"Force use of tabs for indentation in all modes."
+	(setq indent-tabs-mode t)
+	(setq tab-width 4)
+	;; Make TAB key insert a tab character instead of smart-indenting
+	(local-set-key (kbd "TAB") 'tab-to-tab-stop))
 
 ;; Apply to all major modes
 (add-hook 'prog-mode-hook 'enforce-tabs)
@@ -175,11 +188,11 @@
 
 ;; Force conversion of spaces to tabs after indentation
 (defun tabify-current-line ()
-  "Convert leading spaces to tabs on the current line."
-  (when indent-tabs-mode
+	"Convert leading spaces to tabs on the current line."
+	(when indent-tabs-mode
 	(save-excursion
-	  (beginning-of-line)
-	  (when (looking-at "[ \t]+")
+		(beginning-of-line)
+		(when (looking-at "[ \t]+")
 		(tabify (point) (match-end 0))))))
 
 ;; Run after electric-indent
@@ -196,39 +209,39 @@
   :config
   ;; What to visualize
   (setq whitespace-style '(face
-						   tabs
-						   spaces
-						   trailing
-						   space-mark
-						   tab-mark
-						   newline
-						   newline-mark))
+						tabs
+						spaces
+						trailing
+						space-mark
+						tab-mark
+						newline
+						newline-mark))
 
   ;; Character mappings (like Vim listchars)
   (setq whitespace-display-mappings
 		'(
-		  ;; tab: show as "│»»»" (char 9 = tab)
-		  (tab-mark 9 [9474 187 187 187] [124 187 187 187])
-		  ;; space: show as "·" (char 32 = space)
-		  (space-mark 32 [183] [46])
-		  ;; newline: show as "↲" (char 10 = newline)
-		  (newline-mark 10 [8626 10] [182 10])
-		  ;; non-breaking space: show as "␣"
-		  (space-mark 160 [9251] [95])))
+		;; tab: show as "│»»»" (char 9 = tab)
+		(tab-mark 9 [9474 187 187 187] [124 187 187 187])
+		;; space: show as "·" (char 32 = space)
+		(space-mark 32 [183] [46])
+		;; newline: show as "↲" (char 10 = newline)
+		(newline-mark 10 [8626 10] [182 10])
+		;; non-breaking space: show as "␣"
+		(space-mark 160 [9251] [95])))
 
   ;; Face colors for whitespace characters
-  (set-face-attribute 'whitespace-tab nil
-					  :foreground "#016868"
-					  :background nil)
-  (set-face-attribute 'whitespace-space nil
-					  :foreground "#016868"
-					  :background nil)
-  (set-face-attribute 'whitespace-newline nil
-					  :foreground "#016868"
-					  :background nil)
-  (set-face-attribute 'whitespace-trailing nil
-					  :foreground "#d2691e"
-					  :background "#003030"))
+(set-face-attribute 'whitespace-tab nil
+					:foreground "#016868"
+					:background nil)
+(set-face-attribute 'whitespace-space nil
+					:foreground "#016868"
+					:background nil)
+(set-face-attribute 'whitespace-newline nil
+					:foreground "#016868"
+					:background nil)
+(set-face-attribute 'whitespace-trailing nil
+					:foreground "#d2691e"
+					:background "#003030"))
 
 ;; Toggle whitespace-mode with a keybinding
 ;; (global-set-key (kbd "C-c w") 'whitespace-mode)
@@ -240,7 +253,7 @@
 ;; Enable ligatures for JetBrains Mono
 ;; Uses composition-function-table for proper ligature rendering
 (defconst jetbrains-mono-ligatures
-  '("-->" "//" "/**" "/*" "*/" "<!--" ":=" "->>" "<<-" "->" "<-"
+	'("-->" "//" "/**" "/*" "*/" "<!--" ":=" "->>" "<<-" "->" "<-"
 	"<=>" "==" "!=" "<=" ">=" "=:=" "!==" "&&" "||" "..." ".."
 	"|||" "///" "&&&" "===" "++" "--" "=>" "|>" "<|" "||>" "<||"
 	"|||>" "<|||" ">>" "<<" "::=" "|]" "[|" "{|" "|}"
@@ -257,19 +270,19 @@
 
 ;; Sort ligatures by length (longest first) to ensure proper matching
 (setq jetbrains-mono-ligatures
-	  (sort jetbrains-mono-ligatures
+	(sort jetbrains-mono-ligatures
 			(lambda (x y) (> (length x) (length y)))))
 
 ;; Register each ligature pattern in the composition function table
 (dolist (ligature jetbrains-mono-ligatures)
-  (let ((pattern (regexp-quote ligature))
-		(first-char (aref ligature 0)))
-	(set-char-table-range composition-function-table
-						  first-char
-						  (nconc (char-table-range composition-function-table first-char)
-								 (list (vector pattern
-											   0
-											   'compose-gstring-for-graphic))))))
+	(let ((pattern (regexp-quote ligature))
+			(first-char (aref ligature 0)))
+		(set-char-table-range composition-function-table
+							first-char
+							(nconc (char-table-range composition-function-table first-char)
+									 (list (vector pattern
+												0
+												'compose-gstring-for-graphic))))))
 
 ;; =====================================
 ;; Smooth Scrolling
@@ -300,6 +313,12 @@
 ;; =====================================
 
 (load (expand-file-name "config/completion.el" user-emacs-directory))
+
+;; =====================================
+;; 📁 Project Management
+;; =====================================
+
+(load (expand-file-name "config/projectile.el" user-emacs-directory))
 
 ;; =====================================
 ;; 🗹 Dashbaord

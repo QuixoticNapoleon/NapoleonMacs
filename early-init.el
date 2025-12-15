@@ -7,6 +7,12 @@
 ;; Maximize GC threshold during startup (restored in init.el)
 (setq gc-cons-threshold most-positive-fixnum)
 
+(add-hook 'emacs-startup-hook
+	(lambda ()
+		(setq gc-cons-threshold (* 16 1024 1024))))
+
+(setq native-comp-deferred-compilation t)
+
 
 ;; =====================================
 ;; 🎨 Terafox Theme
@@ -16,7 +22,6 @@
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
 (load-theme 'terafox-emacs t)
 
-
 ;; =====================================
 ;; 🎨 UI Configuration (Pre-GUI Init)
 ;; =====================================
@@ -24,7 +29,7 @@
 ;; Configure frame appearance BEFORE GUI initializes
 ;; This prevents the white flash on startup
 (setq default-frame-alist
-	  '((font . "JetBrainsMono Nerd Font-10.5:weight=semi-bold:antialias=true:hinting=true:hintstyle=slight")
+	'((font . "JetBrainsMono Nerd Font-10.5:weight=semi-bold:antialias=true:hinting=true:hintstyle=slight")
 		(background-color . "#003636")	;; Dark cyan background
 		(foreground-color . "#8affff")	;; Bright cyan text
 		(alpha-background . 75)			 ;; 75% opacity (GUI only)
