@@ -15,7 +15,8 @@
 	  (keyword     "#ad5c7c")      ;; Mauve - keywords
 	  (string      "#7aa4a1")      ;; Muted cyan - strings
 	  (number      "#fda47f")      ;; Peachy orange - numbers/constants
-	  (function    "#4d7d90")      ;; Steel blue - functions
+	  ;; (function    "#4d7d90")      ;; Steel blue - functions
+	  (function    "#73a3b7")      ;; Steel blue - functions
 	  (type        "#fda47f")      ;; Peachy orange - types
 	  (builtin     "#e85c51")      ;; Coral red - built-ins
 	  (variable    "#ad6771")      ;; Dusty mauve - variables

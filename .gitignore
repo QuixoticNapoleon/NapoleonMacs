@@ -42,6 +42,10 @@ session.*
 # Bookmarks
 bookmarks
 
+# Other Emacs stuff
+projects
+eshell
+
 # TAGS
 TAGS
 
@@ -49,3 +53,6 @@ TAGS
 .cache/
 .local/
 var/
+
+
+url/
