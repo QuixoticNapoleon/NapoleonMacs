@@ -56,7 +56,12 @@
 					  :foreground "#74c4c4"
 					  :inherit 'unspecified))
 
+;; DIRED
 ;; Dired integration - adds nerd-icons to dired buffers
 (use-package nerd-icons-dired
   :hook
   (dired-mode . nerd-icons-dired-mode))
+
+;; TODO
+;;(use-package dired+
+;;  :load-path "~/.config/emacs/config/packages/dired+")

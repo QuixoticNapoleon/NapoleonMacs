@@ -345,6 +345,12 @@
 (load (expand-file-name "config/treemacs.el" user-emacs-directory))
 
 ;; =====================================
+;; 🐚 Eshell
+;; =====================================
+
+(load (expand-file-name "config/eshell.el" user-emacs-directory))
+
+;; =====================================
 ;; 🪄 Magit
 ;; =====================================
 
