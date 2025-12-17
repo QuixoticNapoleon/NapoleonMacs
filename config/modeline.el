@@ -2,20 +2,20 @@
 
 ;; Nerd Icons configuration for modeline (nerd-icons loaded in init.el)
 (with-eval-after-load 'nerd-icons
-  ;; Fix missing data symlink (straight.el doesn't create it automatically)
-  (let ((data-link (expand-file-name "straight/build/nerd-icons/data" user-emacs-directory))
+	;; Fix missing data symlink (straight.el doesn't create it automatically)
+	(let ((data-link (expand-file-name "straight/build/nerd-icons/data" user-emacs-directory))
 		(data-source (expand-file-name "straight/repos/nerd-icons/data" user-emacs-directory)))
 	(unless (file-exists-p data-link)
-	  (when (file-exists-p data-source)
+	(when (file-exists-p data-source)
 		(make-symbolic-link data-source data-link))))
 
-  ;; Prevent icons from becoming bold in active modeline
-  (dolist (face (face-list))
+;; Prevent icons from becoming bold in active modeline
+(dolist (face (face-list))
 	(when (string-prefix-p "nerd-icons-" (symbol-name face))
 	  (set-face-attribute face nil :weight 'normal)))
 
-  ;; Adjust icon scale to prevent cutoff
-  (setq nerd-icons-scale-factor 1.0))
+;; Adjust icon scale to prevent cutoff
+(setq nerd-icons-scale-factor 1.0))
 
 (use-package doom-modeline
   :ensure t

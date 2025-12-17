@@ -3,7 +3,7 @@
 (use-package dashboard
 	:config
 	;; Use text banner from file
-	(setq dashboard-startup-banner (expand-file-name "config/banner.txt" user-emacs-directory))
+	(setq dashboard-startup-banner (expand-file-name "config/text/banner.txt" user-emacs-directory))
 	(setq dashboard-banner-logo-title "In the Beginning was the Word, and the Word was with EMACS,\nand the Word was EMACS...")
 
 	;; Customize the text banner face to make icon HUGE
