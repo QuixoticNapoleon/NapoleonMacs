@@ -12,6 +12,14 @@
 	eshell-kill-processes-on-exit t
 	eshell-hist-ignoredups t)
 
+;; Function to make C-d exit eshell (from Doom Emacs)
+(defun my-eshell-quit-or-delete-char (arg)
+  "Delete a character (ahead of the cursor) or quit eshell if there's nothing to delete."
+  (interactive "p")
+  (if (and (eolp) (looking-back eshell-prompt-regexp nil))
+      (eshell-life-is-too-much)
+    (delete-char arg)))
+
 ;; History settings
 (setq eshell-history-size 100000
 	eshell-history-file-name (concat user-emacs-directory "eshell/history")
@@ -188,14 +196,9 @@
 		  ;; Emacs-style line navigation
 		  (define-key eshell-mode-map (kbd "C-a") 'eshell-bol)
 		  (define-key eshell-mode-map (kbd "C-e") 'end-of-line)
-		  ;; C-d exits if line is empty, otherwise deletes character
-		  (define-key eshell-mode-map (kbd "C-d")
-		    (lambda ()
-		      (interactive)
-		      (if (and (eolp) (looking-back eshell-prompt-regexp nil))
-		          (eshell-life-is-too-much)  ;; Exit eshell
-		        (delete-char 1)))))           ;; Delete character
-		  ))
+		  ;; C-d exits eshell or deletes char (Doom Emacs implementation)
+		  ;;(define-key eshell-mode-map (kbd "C-d") 'my-eshell-quit-or-delete-char)))
+		  (define-key eshell-mode-map (kbd "C-d") 'eshell-life-is-too-much)))
 
 ;; =====================================
 ;; Evil Integration
@@ -204,6 +207,9 @@
 (with-eval-after-load 'evil
   ;; Start in insert mode (like terminal)
   (add-to-list 'evil-insert-state-modes 'eshell-mode)
+
+  ;; Bind C-d in evil insert state for eshell
+  (evil-define-key 'insert eshell-mode-map (kbd "C-d") 'my-eshell-quit-or-delete-char)
 
   ;; Add eshell to evil-collection if available
   (with-eval-after-load 'evil-collection
