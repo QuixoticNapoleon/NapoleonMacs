@@ -73,11 +73,21 @@
 	ring-bell-function 'ignore)
 
 ;; Configure line numbers with themed colors
-;; Only show line numbers in text/code buffers, not special buffers (treemacs, magit, etc.)
-(add-hook 'prog-mode-hook 'display-line-numbers-mode)
-(add-hook 'text-mode-hook 'display-line-numbers-mode)
-(add-hook 'fundamental-mode-hook 'display-line-numbers-mode)
+;; Enable globally, then disable in specific modes
+(global-display-line-numbers-mode 1)
 (setq display-line-numbers-type 'relative)	;; Relative line numbers for Evil mode
+
+;; Disable line numbers in special buffers
+(dolist (mode '(org-mode-hook
+                term-mode-hook
+                shell-mode-hook
+                eshell-mode-hook
+                treemacs-mode-hook
+                magit-mode-hook
+                help-mode-hook
+                dired-mode-hook))
+
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
 (set-face-attribute 'line-number nil
 	:foreground "#4fa8a8"	;; Softer cyan for line numbers
 	:background "#003636")

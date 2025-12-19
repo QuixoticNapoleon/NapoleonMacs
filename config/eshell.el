@@ -123,9 +123,13 @@
 	"ls -lah (all files) with optional arguments."
 	(apply #'eshell/ls "-lah" args))
 
-(defun eshell/e (file)
-	"Open FILE in Emacs."
-	(find-file file))
+(defun eshell/e (&rest args)
+	"Open a file in Emacs."
+	; (if (null args)
+	; 	(bury-buffer)
+	(mapc #'find-file
+		  (mapcar #'expand-file-name
+				  (eshell-flatten-list (reverse args))))) ;)
 
 (defun eshell/d (&optional dir)
 	"Open dired in DIR (or current directory)."
