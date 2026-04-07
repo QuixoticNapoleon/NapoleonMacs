@@ -245,13 +245,13 @@
   ;; Face colors for whitespace characters
 (set-face-attribute 'whitespace-tab nil
 					:foreground "#016868"
-					:background nil)
+					:background "#003636")
 (set-face-attribute 'whitespace-space nil
 					:foreground "#016868"
-					:background nil)
+					:background "#003636")
 (set-face-attribute 'whitespace-newline nil
 					:foreground "#016868"
-					:background nil)
+					:background "#003636")
 (set-face-attribute 'whitespace-trailing nil
 					:foreground "#d2691e"
 					:background "#003030"))
