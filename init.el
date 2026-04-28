@@ -1,15 +1,6 @@
 ;;; init.el --- Emacs configuration entry point -*- lexical-binding: t -*-
 
 ;; =====================================
-;; 🚀 Performance Optimization
-;; =====================================
-
-;; Restore GC threshold after startup (maximized in early-init.el)
-(add-hook 'emacs-startup-hook
-		  (lambda ()
-			(setq gc-cons-threshold (* 100 1024 1024))))
-
-;; =====================================
 ;; 📦 Package Management (straight.el)
 ;; =====================================
 
@@ -42,28 +33,18 @@
 
 ;; Essential use-package utilities
 (use-package diminish)	;; Hide/abbreviate minor modes
-(use-package bind-key)	;; Key binding utilities
 
 ;; Nerd Icons - icon library (must be loaded early)
 (use-package nerd-icons
-  :if (display-graphic-p))
-
-;; All The Icons - alternative icon library (for compatibility)
-(use-package all-the-icons
   :if (display-graphic-p))
 
 ;; =====================================
 ;; 🎨 UI & Visual Configuration
 ;; =====================================
 
-;; Disable unnecessary UI elements
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
+;; Disable UI elements not covered by early-init.el
 (tooltip-mode -1)
 (blink-cursor-mode -1)
-;;(fringe-mode 5)
-;;(fringe-mode '(5 . 5))
 (fringe-mode 0)
 
 ;; Disable startup messages and bell
@@ -82,8 +63,6 @@
                 term-mode-hook
                 shell-mode-hook
                 eshell-mode-hook
-                treemacs-mode-hook
-                magit-mode-hook
                 help-mode-hook
                 dired-mode-hook))
 
@@ -139,11 +118,6 @@
 ;; Enable electric-indent for auto-indenting on RET
 (electric-indent-mode 1)
 
-;; Track recently opened files for dashboard
-(recentf-mode 1)
-(setq recentf-max-saved-items 50)		;; Save up to 50 recent files
-(setq recentf-max-menu-items 15)		;; Show 15 in menu
-
 ;; =====================================
 ;; I LOVE TABS
 ;; =====================================
@@ -169,32 +143,10 @@
 (add-hook 'text-mode-hook 'enforce-tabs)
 (add-hook 'conf-mode-hook 'enforce-tabs)
 
-;; Configure mode-specific indentation offsets to match tab-width
-;; This ensures electric-indent uses the right width for ALL major languages
-(setq-default c-basic-offset 4)				 ;; C, C++, Java, PHP
-(setq-default js-indent-level 4)			 ;; JavaScript, JSON
-(setq-default typescript-indent-level 4)	 ;; TypeScript
-(setq-default css-indent-offset 4)			 ;; CSS
-(setq-default sh-basic-offset 4)			 ;; Shell scripts
-(setq-default python-indent-offset 4)		 ;; Python
-(setq-default rust-indent-offset 4)			 ;; Rust
-(setq-default ruby-indent-level 4)			 ;; Ruby
-(setq-default perl-indent-level 4)			 ;; Perl
-(setq-default lua-indent-level 4)			 ;; Lua
-(setq-default go-ts-mode-indent-offset 4)	 ;; Go (tree-sitter)
-(setq-default haskell-indent-offset 4)		 ;; Haskell
-(setq-default haskell-indentation-left-offset 4)
-(setq-default swift-mode:basic-offset 4)	 ;; Swift
-(setq-default kotlin-tab-width 4)			 ;; Kotlin
-(setq-default scala-indent:step 4)			 ;; Scala
-(setq-default lisp-indent-offset 4)			 ;; Lisp, Scheme
-(setq-default sgml-basic-offset 4)			 ;; HTML, XML
-(setq-default nxml-child-indent 4)			 ;; XML (nxml-mode)
-(setq-default web-mode-markup-indent-offset 4)	 ;; Web-mode HTML
-(setq-default web-mode-css-indent-offset 4)		 ;; Web-mode CSS
-(setq-default web-mode-code-indent-offset 4)	 ;; Web-mode JS/etc
-(setq-default yaml-indent-offset 4)			 ;; YAML
-(setq-default standard-indent 4)			 ;; Fallback for other modes
+;; Fallback indent offset
+(setq-default standard-indent 4)
+(setq-default lisp-indent-offset 4)
+(setq-default sh-basic-offset 4)
 
 ;; Make sure electric-indent respects tabs
 (setq electric-indent-inhibit nil)
@@ -301,14 +253,6 @@
 ;; Smooth Scrolling
 ;; =====================================
 
-;; (use-package ultra-scroll
-;;	 ;:vc (:url "https://github.com/jdtsmith/ultra-scroll") ; if desired (emacs>=v30)
-;;	 :init
-;;	 (setq scroll-conservatively 3 ; or whatever value you prefer, since v0.4
-;;		   scroll-margin 0)		   ; important: scroll-margin>0 not yet supported
-;;	 :config
-;;	 (ultra-scroll-mode 1))
-
 (pixel-scroll-precision-mode 1)
 (setq scroll-conservatively 101
 	  scroll-margin 0
@@ -322,49 +266,7 @@
 (load (expand-file-name "config/evil.el" user-emacs-directory))
 
 ;; =====================================
-;; 🔍 Completion Framework
-;; =====================================
-
-(load (expand-file-name "config/completion.el" user-emacs-directory))
-
-;; =====================================
-;; 📁 Project Management
-;; =====================================
-
-(load (expand-file-name "config/projectile.el" user-emacs-directory))
-
-;; =====================================
-;; 🗹 Dashbaord
-;; =====================================
-
-(load (expand-file-name "config/dashboard.el" user-emacs-directory))
-
-;; =====================================
-;; 🔨 IDE Features
-;; =====================================
-
-(load (expand-file-name "config/ide.el" user-emacs-directory))
-
-;; =====================================
 ;; 🔫 DOOM Modeline
 ;; =====================================
 
 (load (expand-file-name "config/modeline.el" user-emacs-directory))
-
-;; =====================================
-;; 🌲 Treemacs
-;; =====================================
-
-(load (expand-file-name "config/treemacs.el" user-emacs-directory))
-
-;; =====================================
-;; 🐚 Eshell
-;; =====================================
-
-(load (expand-file-name "config/eshell.el" user-emacs-directory))
-
-;; =====================================
-;; 🪄 Magit
-;; =====================================
-
-(load (expand-file-name "config/magit.el" user-emacs-directory))
