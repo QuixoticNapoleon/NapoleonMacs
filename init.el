@@ -270,3 +270,9 @@
 ;; =====================================
 
 (load (expand-file-name "config/modeline.el" user-emacs-directory))
+
+;; =====================================
+;; 📋 Org Mode
+;; =====================================
+
+(load (expand-file-name "config/org.el" user-emacs-directory))
