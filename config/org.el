@@ -18,7 +18,7 @@
 
 ;; TODO workflow states
 (setq org-todo-keywords
-	  '((sequence "TODO" "DOING" "|" "DONE")))
+	  '((sequence "TODO" "|" "DONE")))
 
 ;; Log timestamp when task is marked DONE
 (setq org-log-done 'time)
@@ -28,20 +28,25 @@
 ;; =====================================
 
 (defun org-update-deadline-properties ()
-  "Update DAYS and URGENCY properties for all TODO entries with deadlines."
+  "Update DAYS and URGENCY properties for all entries with deadlines."
   (interactive)
   (org-map-entries
    (lambda ()
-	 (let ((deadline (org-get-deadline-time (point))))
+	 (let ((deadline (org-get-deadline-time (point)))
+		   (done (org-entry-is-done-p)))
 	   (when deadline
-		 (let* ((days (- (time-to-days deadline) (time-to-days (current-time))))
-				(urgency (cond
-						  ((< days 0) "OVERDUE")
-						  ((<= days 7) "CLOSE")
-						  (t "OK"))))
-		   (org-set-property "DAYS" (number-to-string days))
-		   (org-set-property "URGENCY" urgency)))))
-   "/!TODO|DOING" 'file))
+		 (if done
+			 (progn
+			   (org-set-property "DAYS" "0")
+			   (org-set-property "URGENCY" "DONE"))
+		   (let* ((days (- (time-to-days deadline) (time-to-days (current-time))))
+				  (urgency (cond
+							((< days 0) "OVERDUE")
+							((<= days 7) "CLOSE")
+							(t "OK"))))
+			 (org-set-property "DAYS" (number-to-string days))
+			 (org-set-property "URGENCY" urgency))))))
+   "/TODO|DONE" 'file))
 
 ;; Auto-update when opening org files
 (add-hook 'org-mode-hook
@@ -79,8 +84,9 @@
 ;; =====================================
 
 (use-package calfw
-  :commands cfw:open-calendar-buffer)
+  :demand t)
 
 (use-package calfw-org
+  :demand t
   :after calfw
-  :commands cfw:open-org-calendar)
+)

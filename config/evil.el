@@ -31,3 +31,11 @@
 							 :files (:defaults "modes"))
 	:config
 	(evil-collection-init))  ;; Provides Evil bindings for many Emacs modes
+
+(use-package evil-org
+	:after (evil org)
+	:hook (org-mode . evil-org-mode)
+	:config
+	(evil-org-set-key-theme '(navigation insert textobjects additional calendar))
+	(require 'evil-org-agenda)
+	(evil-org-agenda-set-keys))
