@@ -69,7 +69,7 @@
 ;; =====================================
 
 ;; Load CalDAV credentials from gitignored file
-(let ((caldav-secrets (expand-file-name "caldav.el" user-emacs-directory)))
+(let ((caldav-secrets (expand-file-name "~/Notes/caldav.el")))
   (when (file-exists-p caldav-secrets)
 	(load caldav-secrets)))
 

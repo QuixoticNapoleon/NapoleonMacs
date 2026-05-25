@@ -59,8 +59,7 @@
 (setq display-line-numbers-type 'relative)	;; Relative line numbers for Evil mode
 
 ;; Disable line numbers in special buffers
-(dolist (mode '(org-mode-hook
-                term-mode-hook
+(dolist (mode '(term-mode-hook
                 shell-mode-hook
                 eshell-mode-hook
                 help-mode-hook

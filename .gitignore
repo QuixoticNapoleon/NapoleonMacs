@@ -49,9 +49,6 @@ eshell
 # TAGS
 TAGS
 
-# CalDAV secrets
-caldav.el
-
 # Other
 .cache/
 .local/
